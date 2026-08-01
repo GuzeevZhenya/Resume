@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Евгений Гузеев — Frontend Developer</title>
+    <meta
+      name="description"
+      content="Frontend-разработчик: React, TypeScript, Next.js, FSD, RTK Query, Socket.IO. Ictroot, Telegram-боты, React Native."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <a class="logo" href="#top" data-magnetic>ЕГ</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about">О себе</a>
+        <a href="#experience">Опыт</a>
+        <a href="#projects">Проекты</a>
+        <a href="#skills">Навыки</a>
+        <a href="#contact">Контакт</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="orb orb-c"></div>
+          <div class="grid-lines"></div>
+        </div>
+        <div class="hero-inner">
+          <p class="hero-kicker reveal">Junior Frontend · React / TypeScript / Next.js</p>
+          <h1 class="hero-name">
+            <span class="reveal-line"><span>Евгений</span></span>
+            <span class="reveal-line"><span>Гузеев</span></span>
+          </h1>
+          <p class="hero-tagline reveal">
+            Командная разработка SPA/SSR на Next.js и FSD, realtime Messenger, чистый TypeScript и
+            pet-проекты: Telegram-боты и Expo / React Native.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#projects" data-magnetic>Смотреть проекты</a>
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/GuzeevZhenya"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-magnetic
+              >GitHub</a
+            >
+          </div>
+        </div>
+        <a class="scroll-hint" href="#about" aria-label="К разделу о себе">
+          <span>Scroll</span>
+          <i></i>
+        </a>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-head reveal">
+          <p class="eyebrow">01 — О себе</p>
+          <h2>Frontend с фокусом на архитектуру и production-ready код</h2>
+        </div>
+        <div class="about-grid">
+          <p class="about-lead reveal">
+            Frontend-разработчик с опытом командной разработки SPA/SSR на React, TypeScript и
+            Next.js (FSD, RTK Query, Socket.IO, optimistic updates, строгая типизация). В команде
+            IT-Incubator развиваю Instagram-like продукт Ictroot: auth, лента, профиль, Messenger.
+            Пишу чистый код, прохожу review, довожу до production-ready. Открыт к Junior / Middle
+            Frontend · Беларусь · remote.
+          </p>
+          <ul class="about-facts">
+            <li class="reveal">
+              <strong>2023</strong>
+              <span>IT-Incubator · Frontend React/TS</span>
+            </li>
+            <li class="reveal">
+              <strong>2018–23</strong>
+              <span>ГГТУ · инженер-программист</span>
+            </li>
+            <li class="reveal">
+              <strong>Жлобин</strong>
+              <span>Беларусь · готов к remote</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="section-head reveal">
+          <p class="eyebrow">02 — Опыт</p>
+          <h2>Командная разработка продукта</h2>
+        </div>
+        <article class="job reveal">
+          <div class="job-top">
+            <div>
+              <h3>Frontend-разработчик</h3>
+              <p class="job-place">IT-Incubator · Ictroot (Instagram-like) · команда 6</p>
+            </div>
+            <p class="job-dates">Авг 2023 — н.в.</p>
+          </div>
+          <p class="job-stack">
+            Next.js (App Router) · React · TypeScript · Redux Toolkit · RTK Query · Socket.IO · RHF +
+            Zod · SCSS Modules · pnpm · Vitest · Git Flow · code review
+          </p>
+          <ul class="job-list">
+            <li>FSD (app / widgets / features / entities / shared); presentation vs orchestration.</li>
+            <li>
+              RTK Query: кэш, invalidateTags, optimistic updates, reauth; CRUD постов, юзеров,
+              комментариев, лайков.
+            </li>
+            <li>
+              Messenger UC-1: Socket.IO text-send (`receive-message`), optimistic bubble, clear input
+              только после успеха, без дублей на double-click.
+            </li>
+            <li>
+              Список диалогов без reload: общий RTK Query cache key, preview + reorder; первый чат
+              появляется сразу после send; вход в диалог с профиля.
+            </li>
+            <li>
+              Auth-flow (cookies, protected routes); формы RHF+Zod; infinite scroll, поиск;
+              подписки/тарифы; UI-kit / Figma.
+            </li>
+            <li>Vitest, code review, типизация без any, quality gates (`ci:check`).</li>
+          </ul>
+          <div class="job-links">
+            <a
+              class="text-link"
+              href="https://ictroot.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Live ictroot.uk →</a
+            >
+            <a
+              class="text-link"
+              href="https://github.com/ictroot70/Ict"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub Ict →</a
+            >
+          </div>
+        </article>
+      </section>
+
+      <section class="section projects" id="projects">
+        <div class="section-head reveal">
+          <p class="eyebrow">03 — Проекты</p>
+          <h2>Командный продукт и pet-проекты</h2>
+        </div>
+
+        <article class="project reveal" data-tilt>
+          <div class="project-visual" style="--accent: #2ec4b6">
+            <div class="project-visual-inner">
+              <span class="project-index">01</span>
+              <div class="fake-messenger">
+                <div class="fake-messenger-side">
+                  <i></i><i></i><i class="active"></i>
+                </div>
+                <div class="fake-messenger-main">
+                  <div class="bubble left"></div>
+                  <div class="bubble right"></div>
+                  <div class="bubble right short"></div>
+                  <div class="fake-composer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-meta">Next.js · FSD · RTK Query · Socket.IO</p>
+            <h3>Ictroot — Instagram-like соцсеть</h3>
+            <p>
+              Командный frontend (IT-Incubator): лента, профили, auth, подписки. В Messenger —
+              текстовые сообщения через общий Socket.IO слой, optimistic UI, обновление списка
+              диалогов без reload, вход в чат с профиля. Стек: Next.js App Router, TypeScript
+              strict, FSD, Redux Toolkit / RTK Query, RHF + Zod, SCSS Modules, Vitest.
+            </p>
+            <ul class="tags">
+              <li>Next.js 15</li>
+              <li>FSD</li>
+              <li>RTK Query</li>
+              <li>Socket.IO</li>
+              <li>Vitest</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://ictroot.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live</a
+              >
+              <a
+                href="https://github.com/ictroot70/Ict"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-alt reveal" data-tilt>
+          <div class="project-visual" style="--accent: #0d7377">
+            <div class="project-visual-inner">
+              <span class="project-index">02</span>
+              <div class="fake-ui">
+                <div class="fake-bar"></div>
+                <div class="fake-row"></div>
+                <div class="fake-row short"></div>
+                <div class="fake-chips"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-meta">Telegram · TypeScript · Google Sheets</p>
+            <h3>Бот записи к тренерам</h3>
+            <p>
+              Онлайн-запись: тренер → дата → время → услуга (до 2 чел. на слот). Онбординг,
+              профиль, заметки «Здоровье» в Sheets, роли админ/тренер и генерация расписания.
+              Google Sheets — source of truth + кэш API.
+            </p>
+            <ul class="tags">
+              <li>grammY</li>
+              <li>Node.js</li>
+              <li>Google Sheets API</li>
+              <li>GCP</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://t.me/book_training_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Открыть бота</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-tilt>
+          <div class="project-visual" style="--accent: #c45c26">
+            <div class="project-visual-inner">
+              <span class="project-index">03</span>
+              <div class="fake-chat">
+                <div class="bubble left"></div>
+                <div class="bubble right"></div>
+                <div class="bubble left short"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-meta">Expo · React Native · Mini App</p>
+            <h3>Fitness Tracker + Telegram Mini App</h3>
+            <p>
+              Дневник силовых: Android (Expo/APK) и Telegram Mini App на одном codebase. Каталог
+              упражнений с видео, фильтр домашнего инвентаря, Pro-планы (зал/дом, здоровье). Local
+              SQLite + grammY Web App.
+            </p>
+            <ul class="tags">
+              <li>Expo</li>
+              <li>React Native</li>
+              <li>SQLite</li>
+              <li>EAS Build</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://t.me/SportNotebook_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Открыть бота</a
+              >
+              <a
+                href="https://github.com/GuzeevZhenya/Fitnes-Trecker-TG_Bot-"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="section-head reveal">
+          <p class="eyebrow">04 — Навыки</p>
+          <h2>Стек и инструменты</h2>
+        </div>
+        <div class="skills-marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>TypeScript</span><span>React</span><span>Next.js</span><span>FSD</span>
+            <span>RTK Query</span><span>Socket.IO</span><span>Redux Toolkit</span><span>React Native</span>
+            <span>Expo</span><span>grammY</span><span>Node.js</span><span>Vitest</span>
+            <span>SCSS</span><span>Git Flow</span>
+            <span>TypeScript</span><span>React</span><span>Next.js</span><span>FSD</span>
+            <span>RTK Query</span><span>Socket.IO</span><span>Redux Toolkit</span><span>React Native</span>
+            <span>Expo</span><span>grammY</span><span>Node.js</span><span>Vitest</span>
+            <span>SCSS</span><span>Git Flow</span>
+          </div>
+        </div>
+        <ul class="skills-list">
+          <li class="reveal">
+            <h3>Frontend</h3>
+            <p>TypeScript / JavaScript, React, Next.js (App Router), FSD, Redux Toolkit, RTK Query, RHF + Zod, HTML, CSS / SCSS Modules</p>
+          </li>
+          <li class="reveal">
+            <h3>Mobile &amp; боты</h3>
+            <p>React Native / Expo, Telegram Mini Apps, EAS Build, Node.js, grammY</p>
+          </li>
+          <li class="reveal">
+            <h3>Данные &amp; API</h3>
+            <p>REST API, RTK Query cache/reauth, Socket.IO / WebSockets, SQLite, Google Sheets API</p>
+          </li>
+          <li class="reveal">
+            <h3>Процесс</h3>
+            <p>Git, Git Flow, pnpm, Vitest, ESLint, code review, quality gates, самостоятельность</p>
+          </li>
+        </ul>
+        <div class="edu-row reveal">
+          <div>
+            <p class="eyebrow">Образование</p>
+            <p><strong>IT-Incubator</strong> — Frontend React / TS / Redux · 2023</p>
+            <p><strong>ГГТУ им. П. О. Сухого</strong> — инженер-программист · 2018–2023</p>
+          </div>
+          <div>
+            <p class="eyebrow">Языки</p>
+            <p>Русский — родной</p>
+            <p>English — A2–B1</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-panel reveal">
+          <p class="eyebrow">05 — Контакт</p>
+          <h2>Открыт к Junior / Middle Frontend</h2>
+          <p>
+            Жлобин, Беларусь · remote-friendly. Напишите — обсудим задачу или вакансию.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:shyst.evgeny@mail.ru" data-magnetic
+              >shyst.evgeny@mail.ru</a
+            >
+            <div class="socials">
+              <a href="tel:+375291061403" data-magnetic>+375 29 106-14-03</a>
+              <a
+                href="https://github.com/GuzeevZhenya"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-magnetic
+                >GitHub</a
+              >
+              <a
+                href="https://linkedin.com/in/evgeny-guzeev-7aa5b71a2"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-magnetic
+                >LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Евгений Гузеев</p>
+      <a href="#top">Наверх ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
