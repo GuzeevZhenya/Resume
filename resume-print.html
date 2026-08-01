@@ -2,226 +2,257 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Евгений Гузеев — Resume</title>
+  <title>Евгений Гузеев — Frontend Developer</title>
   <style>
-    @page { size: A4; margin: 10mm 10mm; }
+    @page { size: A4; margin: 0; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: Calibri, "Segoe UI", Arial, sans-serif;
-      font-size: 9pt;
+      font-size: 8.7pt;
       line-height: 1.28;
-      color: #111;
+      color: #1a1a1a;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
     .page {
       display: grid;
-      grid-template-columns: 58mm 1fr;
-      gap: 0 10mm;
-      min-height: 100%;
+      grid-template-columns: 64mm 1fr;
+      min-height: 297mm;
     }
     .sidebar {
-      border-right: 2.5px solid #1a1a1a;
-      padding-right: 8mm;
+      background: #1e3a3f;
+      color: #f4f7f6;
+      padding: 11mm 7mm 10mm 8mm;
     }
-    h1 {
-      font-size: 18pt;
+    .sidebar a { color: #9fd4d1; text-decoration: none; }
+    .name {
+      font-size: 22pt;
       font-weight: 700;
-      letter-spacing: 0.01em;
-      line-height: 1.1;
-      margin-bottom: 2px;
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+      margin-bottom: 4px;
     }
-    .role {
-      font-size: 9.5pt;
+    .title {
+      font-size: 10pt;
       font-weight: 600;
-      margin-bottom: 9px;
-      color: #222;
+      color: #9fd4d1;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10mm;
+      padding-bottom: 4mm;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
     }
-    .section { margin-bottom: 10px; }
-    .section-title {
+    .side-block { margin-bottom: 7mm; }
+    .side-h {
       font-size: 9pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      border-bottom: 1.5px solid #111;
-      padding-bottom: 2px;
-      margin-bottom: 6px;
+      letter-spacing: 0.08em;
+      color: #9fd4d1;
+      margin-bottom: 3mm;
     }
-    a { color: #111; text-decoration: none; }
-    .contact p { margin-bottom: 3px; word-break: break-word; }
-    .muted { color: #444; font-size: 8.3pt; }
-    ul { padding-left: 13px; }
-    li { margin-bottom: 2.5px; }
-    .edu-item { margin-bottom: 7px; }
-    .edu-item strong { display: block; }
-    .job { margin-bottom: 9px; }
-    .job-title { font-size: 10pt; font-weight: 700; }
-    .job-meta { color: #333; font-size: 8.4pt; margin: 1px 0 3px; }
-    .stack {
-      font-size: 8.3pt;
-      color: #222;
-      margin-bottom: 4px;
+    .side-block p, .side-block li {
+      font-size: 8.8pt;
+      margin-bottom: 2.5px;
+      color: #e8f0ef;
     }
-    .also {
-      margin-top: 5px;
-      font-size: 8.2pt;
+    .side-block ul { list-style: none; padding: 0; }
+    .side-block ul li::before {
+      content: "• ";
+      color: #9fd4d1;
+    }
+    .edu strong { display: block; color: #fff; margin-top: 3mm; }
+    .edu span { font-size: 8.3pt; color: #c5d5d3; }
+
+    .main {
+      padding: 12mm 11mm 10mm 10mm;
+      background: #fff;
+    }
+    .main-h {
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1e3a3f;
+      border-bottom: 2px solid #1e3a3f;
+      padding-bottom: 2mm;
+      margin: 0 0 3.5mm;
+    }
+    .about {
+      margin-bottom: 5.5mm;
+      font-size: 9.3pt;
+      line-height: 1.38;
+    }
+    .about p + p { margin-top: 2.5mm; }
+
+    .exp-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: baseline;
+      margin-bottom: 2mm;
+    }
+    .exp-head strong { font-size: 10pt; color: #1e3a3f; }
+    .exp-dates { font-size: 8.5pt; color: #555; white-space: nowrap; }
+    .stack-line {
+      font-size: 8.5pt;
       color: #333;
-      line-height: 1.3;
+      margin-bottom: 3mm;
+      padding: 2mm 2.5mm;
+      background: #f2f6f6;
     }
-    .links p { margin-bottom: 2px; }
+
+    .projects { margin-bottom: 4mm; }
+    .proj {
+      margin-bottom: 2.5mm;
+    }
+    .proj strong { color: #1e3a3f; }
+    .proj span { font-size: 8.5pt; color: #444; }
+
+    .tasks { padding-left: 14px; margin-bottom: 4mm; }
+    .tasks li { margin-bottom: 2px; font-size: 8.9pt; }
+
+    .links {
+      font-size: 8.5pt;
+      color: #333;
+      line-height: 1.45;
+    }
+    .links a { color: #1e3a3f; text-decoration: none; }
   </style>
 </head>
 <body>
   <div class="page">
     <aside class="sidebar">
-      <div class="section contact">
+      <div class="name">ЕВГЕНИЙ<br/>ГУЗЕЕВ</div>
+      <div class="title">Front-end Developer</div>
+
+      <div class="side-block">
+        <div class="side-h">Контакты</div>
         <p>+375 29 106-14-03</p>
         <p><a href="mailto:shyst.evgeny@mail.ru">shyst.evgeny@mail.ru</a></p>
-        <p>Жлобин, Беларусь</p>
-        <p><a href="https://github.com/GuzeevZhenya">github.com/GuzeevZhenya</a></p>
-        <p><a href="https://linkedin.com/in/evgeny-guzeev-7aa5b71a2">linkedin.com/in/evgeny-guzeev</a></p>
+        <p>Жлобин / Гомель, Беларусь</p>
+        <p>Remote / hybrid / office</p>
+        <p><a href="https://github.com/GuzeevZhenya">GitHub</a></p>
+        <p><a href="https://linkedin.com/in/evgeny-guzeev-7aa5b71a2">LinkedIn</a></p>
+        <p><a href="https://ictroot.uk">Portfolio · ictroot.uk</a></p>
+        <p><a href="https://gomel.rabota.by/resume/28554fd3ff104144470039ed1f773346363378">rabota.by</a></p>
       </div>
 
-      <div class="section">
-        <div class="section-title">Образование</div>
-        <div class="edu-item">
-          <strong>IT-Incubator</strong>
-          <span class="muted">Курс: Frontend-разработчик<br/>React / TypeScript / Redux / RTK Query<br/>2023</span>
-        </div>
-        <div class="edu-item">
-          <strong>ГГТУ им. П. О. Сухого</strong>
-          <span class="muted">Инженер-программист<br/>2018 – 2023</span>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="section-title">Hard Skills</div>
+      <div class="side-block">
+        <div class="side-h">Технологии</div>
         <ul>
           <li>TypeScript / JavaScript</li>
-          <li>React, Next.js (App Router)</li>
-          <li>FSD (Feature-Sliced Design)</li>
+          <li>React</li>
           <li>Redux Toolkit, RTK Query</li>
-          <li>Socket.IO / WebSockets</li>
+          <li>Next.js</li>
+          <li>HTML, CSS / SCSS</li>
           <li>React Hook Form, Zod</li>
-          <li>HTML, CSS / SCSS Modules</li>
-          <li>Git, Git Flow, pnpm</li>
-          <li>REST API, Vitest</li>
-        </ul>
-        <p class="also">
-          Также работал с / имею представление:
-          React Native / Expo, Node.js, grammY, SQLite, Google Sheets API,
-          GraphQL / Apollo, Storybook, Radix UI, Material UI, Styled Components,
-          Formik, EAS Build, Telegram Mini Apps, Axios, Webpack/Vite,
-          паттерны проектирования, HTTP, клиент-сервер, OOP, алгоритмы (Codewars).
-        </p>
-      </div>
-
-      <div class="section">
-        <div class="section-title">Soft Skills</div>
-        <ul>
-          <li>Работа в команде</li>
-          <li>Code review</li>
-          <li>Поиск и исправление ошибок</li>
-          <li>Самостоятельность</li>
-          <li>Целеустремлённость</li>
-          <li>Стрессоустойчивость</li>
-          <li>Баланс работы и отдыха</li>
+          <li>Axios, REST API</li>
+          <li>Socket.IO / WebSockets</li>
+          <li>Git, Git Flow, FSD</li>
+          <li>React Native / Expo</li>
+          <li>Node.js, grammY</li>
+          <li>Cursor, Claude Code, Base44</li>
+          <li>AI-assisted / vibe coding</li>
         </ul>
       </div>
 
-      <div class="section">
-        <div class="section-title">Языки</div>
+      <div class="side-block edu">
+        <div class="side-h">Образование</div>
+        <strong>IT-INCUBATOR</strong>
+        <span>Front-end development<br/>React · TypeScript · Redux · RTK Query · Next.js · Git · Storybook<br/>2023</span>
+        <strong>ГГТУ им. П. О. Сухого</strong>
+        <span>Инженер-программист<br/>2018 – 2023</span>
+      </div>
+
+      <div class="side-block">
+        <div class="side-h">Языки</div>
         <p>Русский — родной</p>
-        <p>English — Pre-Intermediate (A2–B1)</p>
+        <p>English — Pre-Intermediate (A2–B1, in progress)</p>
       </div>
     </aside>
 
-    <main>
-      <h1>ЕВГЕНИЙ ГУЗЕЕВ</h1>
-      <p class="role">Junior Frontend Developer · React / TypeScript / Next.js</p>
-
-      <div class="section">
-        <div class="section-title">Обо мне</div>
+    <main class="main">
+      <h2 class="main-h">О себе</h2>
+      <div class="about">
         <p>
-          Frontend-разработчик с опытом командной разработки SPA и SSR-приложений на React,
-          TypeScript и Next.js. Специализируюсь на масштабируемой архитектуре (FSD), RTK Query,
-          realtime (Socket.IO), оптимистичных обновлениях и строгой типизации. Участвую в разработке
-          Instagram-like продукта Ictroot в команде IT-Incubator. Пишу чистый, поддерживаемый код,
-          прохожу code review и довожу задачи до production-ready. Увлекаюсь алгоритмами (Codewars).
-          Дополнительно делаю pet-проекты: Telegram-боты и Expo / React Native + Mini App.
+          Frontend-разработчик с опытом создания SPA и SSR 1+ года:
+          <strong>TypeScript, React, Redux Toolkit / RTK Query, Next.js</strong>.
+          Активно использую ИИ-инструменты в разработке:
+          <strong>Cursor, Claude Code, Base44</strong> — ускоряю прототипирование,
+          рефакторинг и сборку полноценных продуктов (e-commerce, Telegram, mobile).
+          Расширяю стек: React Native / Expo, Telegram Mini Apps. Codewars, открыт к офферам.
+        </p>
+        <p>
+          Приоритет — чистый код, строгая типизация, Git Flow / code review / SCRUM.
+          Соблюдаю баланс работы и отдыха.
         </p>
       </div>
 
-      <div class="section">
-        <div class="section-title">Опыт</div>
+      <h2 class="main-h">Опыт</h2>
+      <div class="exp-head">
+        <strong>Мои работы как Front-end разработчика</strong>
+        <span class="exp-dates">Август 2023 — н.в.</span>
+      </div>
+      <p class="stack-line">
+        React, TypeScript, Next.js, Redux Toolkit, RTK Query, Socket.IO, RHF + Zod, FSD, Git, Vitest
+        · команда 6 · + AI: Cursor / Claude Code / Base44
+      </p>
 
-        <div class="job">
-          <div class="job-title">Frontend-разработчик</div>
-          <p class="job-meta">
-            IT-Incubator · Проект Ictroot (Instagram-like social network)<br/>
-            Август 2023 — настоящее время · Команда 6 человек · Git Flow, code review
-          </p>
-          <p class="stack">
-            Стек: Next.js (App Router), React, TypeScript, Redux Toolkit, RTK Query, Socket.IO,
-            React Hook Form, Zod, SCSS Modules, Git, Vitest
-          </p>
-          <ul>
-            <li>FSD: app / widgets / features / entities / shared; presentation vs orchestration.</li>
-            <li>RTK Query: кэш, invalidateTags, optimistic updates, reauth в base query; CRUD ленты/профиля.</li>
-            <li>
-              Messenger UC-1: Socket.IO text messages — emit receive-message,
-              optimistic bubble, clear input только после успеха, без дублей на double-click.
-            </li>
-            <li>
-              Список диалогов без reload: общий RTK Query cache key, preview + reorder, первый чат
-              появляется сразу после send; вход в диалог с профиля.
-            </li>
-            <li>Auth-flow, формы RHF+Zod, UI-kit / Figma; unit-тесты Vitest, code review, quality gates.</li>
-          </ul>
-          <p class="muted">Live: ictroot.uk · GitHub: github.com/ictroot70/Ict</p>
+      <div class="projects">
+        <p style="font-weight:700; margin-bottom:1.5mm; color:#1e3a3f;">Проекты:</p>
+        <div class="proj">
+          <strong>Ictroot</strong> —
+          <span>
+            Instagram-like соцсеть (IT-Incubator): auth, лента, Messenger Socket.IO / RTK Query.
+            <a href="https://ictroot.uk">ictroot.uk</a>
+          </span>
         </div>
-
-        <div class="job">
-          <div class="job-title">Личный проект · Telegram-бот записи к тренерам</div>
-          <p class="job-meta">
-            Домен: онлайн-запись на тренировки · 2024–2026 · Solo
-          </p>
-          <p class="stack">
-            Стек: TypeScript, Node.js, grammY, Google Sheets API, Google Cloud (Service Account)
-          </p>
-          <ul>
-            <li>Мастер записи: тренер → дата → время → услуга (до 2 человек на слот).</li>
-            <li>Онбординг и профиль; блок «Здоровье»; роли админ/тренер; генерация расписания.</li>
-            <li>Google Sheets как source of truth + кэширование API; синхронизация листов тренеров.</li>
-          </ul>
-          <p class="muted">Бот: t.me/book_training_bot</p>
+        <div class="proj">
+          <strong>Aqua Market Go</strong> —
+          <span>
+            Интернет-магазин сантехники (Жлобин): каталог с вариантами (цвет/размер), поиск,
+            избранное, сравнение, отзывы, корзина (гость/user), доставка/самовывоз, оплата наличные/карта;
+            ЛК (заказы, лояльность); админка (статистика/графики, заказы по датам, CRUD товаров/категорий/баннеров,
+            Excel import-export, перезвоны, объявления, календарь-заметки, оферта/ПДн).
+            Стек: React · TypeScript · Base44 · Cursor / Claude.
+            Live:
+            <a href="https://preview--aqua-market-go.base44.app/">preview--aqua-market-go.base44.app</a>
+          </span>
         </div>
-
-        <div class="job">
-          <div class="job-title">Личный проект · Fitness Tracker + Telegram Mini App</div>
-          <p class="job-meta">
-            Домен: дневник силовых тренировок · 2025–2026 · Solo
-          </p>
-          <p class="stack">
-            Стек: TypeScript, React Native, Expo, React Navigation, SQLite, grammY, EAS Build
-          </p>
-          <ul>
-            <li>Android (Expo/APK) и Telegram Mini App на одном codebase.</li>
-            <li>Каталог упражнений с видео, фильтр домашнего инвентаря, Pro-планы (зал/дом, здоровье).</li>
-          </ul>
-          <p class="muted">
-            Бот: t.me/SportNotebook_bot ·
-            GitHub: github.com/GuzeevZhenya/Fitnes-Trecker-TG_Bot-
-          </p>
+        <div class="proj">
+          <strong>Booking bot</strong> —
+          <span>
+            Telegram-запись к тренерам (grammY + Google Sheets).
+            <a href="https://t.me/book_training_bot">t.me/book_training_bot</a>
+          </span>
+        </div>
+        <div class="proj">
+          <strong>Fitness Tracker</strong> —
+          <span>
+            Expo + Telegram Mini App, каталог, домашний инвентарь, Pro-планы.
+            <a href="https://t.me/SportNotebook_bot">t.me/SportNotebook_bot</a>
+          </span>
         </div>
       </div>
 
-      <div class="section links">
-        <div class="section-title">Ссылки</div>
-        <p>Ictroot Live: <a href="https://ictroot.uk">ictroot.uk</a></p>
-        <p>Проект Ict: <a href="https://github.com/ictroot70/Ict">github.com/ictroot70/Ict</a></p>
-        <p>GitHub: <a href="https://github.com/GuzeevZhenya">github.com/GuzeevZhenya</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/evgeny-guzeev-7aa5b71a2">linkedin.com/in/evgeny-guzeev-7aa5b71a2</a></p>
+      <p style="font-weight:700; margin-bottom:1.5mm; color:#1e3a3f;">Рабочие задачи:</p>
+      <ul class="tasks">
+        <li>FSD-архитектура (UI / BLL / DAL); кастомные хуки и переиспользуемые компоненты</li>
+        <li>RTK Query: кэш, invalidateTags, optimistic updates, reauth; CRUD / REST</li>
+        <li>Messenger UC-1: Socket.IO text messages, optimistic UI, диалоги без reload</li>
+        <li>Auth-flow, формы RHF+Zod, пагинация/поиск/фильтры, загрузка файлов</li>
+        <li>E-commerce: варианты товара, админ CRUD, CSV/Excel, email по статусам заказа</li>
+        <li>Разработка с ИИ (Cursor, Claude Code, Base44): постановка задач, ревью, итерации</li>
+        <li>Git Flow, code review, Vitest / Jest, рефакторинг, оптимизация (memo/callback)</li>
+      </ul>
+
+      <h2 class="main-h">Ссылки</h2>
+      <div class="links">
+        Ictroot: <a href="https://ictroot.uk">ictroot.uk</a> ·
+        Aqua Market: <a href="https://preview--aqua-market-go.base44.app/">base44.app</a> ·
+        GitHub: <a href="https://github.com/GuzeevZhenya">GuzeevZhenya</a> ·
+        LinkedIn: <a href="https://linkedin.com/in/evgeny-guzeev-7aa5b71a2">evgeny-guzeev</a>
       </div>
     </main>
   </div>
