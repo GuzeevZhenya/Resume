@@ -11,4 +11,4 @@ PDF: `Guzeev_Evgeny_Resume.pdf`
 
 ## Live
 
-GitHub Pages (if enabled): https://guzeevzhenya.github.io/Resume/
+ https://resume-rust-tau.vercel.app/
