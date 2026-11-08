@@ -598,8 +598,21 @@ button {
   place-items: center;
 }
 
+.project-visual-inner.has-shot {
+  padding: 0;
+}
+
+.project-shot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
 .project-index {
   position: absolute;
+  z-index: 2;
   top: 1.25rem;
   left: 1.35rem;
   font-family: var(--font-display);
